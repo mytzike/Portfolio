@@ -1,6 +1,6 @@
 /*
 Author: Daisy Leming
-Date:03.05.2023
+Date:21.05.2023
 Version: 1
 */
 
@@ -49,42 +49,32 @@ body {
 
 
    
-        
     
-
-
-
-
 
 /* NAVIGATION
 ------------------------------------------------
 */
 nav {
     background-color: #5E6073;
-    position:sticky;
     opacity: 60%;
     width: 100%;
-    padding:10px 20px;
+    padding:5px 2px;/* padding is space around the content*/
     border-radius: 8px;/* added this feature, so that the corners are not that sharp*/
 }
 
-nav ul{
-    display:flex;
-    justify-content: space-evenly;
+nav ul{/*means that I will stylise the links not the navigation bar itself*/
+    display:flex; /*so that the content is side by side*/
+    justify-content: space-evenly;/* used this so that the content is spaced out evenly*/
     padding-left: 0px;
     list-style: none;
     text-decoration: none;
-    margin-top: auto;
-    position:sticky;
-    z-index:500;
-    
-    
+    margin-top:0; /*Margin is space around the content and padding with transparent background*/
+     
 }
 nav img{
-   position:static;
+    position:relative;/*meaning the position is by default*/
     width:100%; /*to change the size of the logo image*/
     height:auto; /*changes the size automaticly*/
-   padding-left: 0;
 }
 
 nav a { /* I use same order to create buttons*/
@@ -95,27 +85,27 @@ nav a { /* I use same order to create buttons*/
     padding: 20px 20px;
     text-align:start;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     color:#F2F4D1;
-    cursor: pointer;
+    cursor: pointer; /* to indicate that this can be clicked forward*/
     margin-bottom: 20px;
     margin-top:20px;
     display:flex;
 }
-nav a: visited{
-    color: #B2D3BE;
+nav a:visited{/*means when the link has been clicked once*/
+    color:#B2D3BE;
 }
 
 
-nav a:hover {
+nav a:hover {/*When the cursor goes over to indicate that this is a button*/
     background-color: #B2D3BE;
     color:#5E6073;
     
 }
 .logo a {
   
-    padding:inherit;
+    padding:inherit;/*means that it inherits the padding from the parent*/
 
 }
 .logo a:hover{
@@ -126,18 +116,23 @@ nav a:hover {
 /* CONTENT 1
 ------------------------------------------------
 */
-article{
+main{
+    display:flex;
+}
+main article{
     background-color:#5E6073;
     opacity: 50%;
     border-radius: 8px;
     margin: 20px;
-}
-main {
     display:flex;
-    justify-content:space-evenly;
+    flex-direction: column;/*This means that the content is arranged in a column*/
+
 }
+
 main img{
     padding: 50px;
+    display:flex;/*flex is never inherited and has to be used always to state the browser that this is a flex item otherwise it will be block item by default*/
+
 }
 main h2{
     
@@ -146,6 +141,9 @@ main h2{
     font-size: 50px;
     font-family:sans-serif; 
     margin: 50px;
+    display:flex;
+    flex-direction: row;
+    align-self: center
     
 }
 main p{
@@ -159,71 +157,109 @@ main p{
     color:#F2F4D1;
     border: solid;
     padding:5px 5px 5px 5px;
-    float:right;
+    flex-direction: column;
+    align-self: flex-end;
     margin: 5px 50px 30px 10px;
     clear:both;
+    width: 90px;
  
 }
 .form-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding:75px;
+    display: block;/*used block item in purpose for design I was going for*/
+    padding:100px 500px;
     background-color:#5E6073;
     opacity:70%;
     margin-top:20px;
+    border-radius:8px;
+   
        
 }
-.input-text{
-    padding 5px 5px;
+
+.input-text input{
+    display:flex;
+    flex-direction: column;
+    padding: 5px 5px;
     margin: 5px;
+    width:200px;
+}
+.input-text textarea{
+    width:200px; height:50px;
+    margin: 10px;
+    display:flex;
+}
+.send-form{
+    width:100px; height:25px;
+    cursor: pointer;
 }
 .map-left{
     display: flex;
-    justify-content: flex-end;
+    justify-content:center;
     align-items:center;
     padding-top: 20px;
     margin:0;
 
-  
-
 }
 .contact-heading h2{
     background-color:#5E6073;
-    opacity:70%;
-    width:20%; height:auto;
-    margin-top:20px;
-    margin-left: 0;
-    margin-right:0;
-    margin-bottom: 0;
+    opacity:60%;
+    margin-top:25px;
+    padding:25px 25px;
+    border-radius:8px;
+    display:flex;
+    text-align: center;
+
+}
+.about{ /*I defined this class to make the items go in a row not in a columb*/
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    flex-direction: row;
 }
  
 /* CONTENT 2
 ------------------------------------------------
 */
-
+.pictures{
+    background-color:#5E6073;
+    opacity:80%;
+    display:flex;
+    flex-wrap:wrap;
+    
+}
+.pictures h2{
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+    font-size: 25px;
+    padding:25px 25px 25px 25px;
+    
+    
+}
 .pictures div {
     display:flex;
     flex-direction:row;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    padding:100px;
+    
     }
-#drawing img{
-   
-}
-
-#paintings{
-    
-   
-}
-#digi{
+.pictures img{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    padding:25px 50px;
     
 }
-
+.pictures a{
+    display:flex;
+    justify-content: space-evenly;
+    
+    
+}
 /* SIDEBAR
 ------------------------------------------------
 */
-aside{
+.sidebar{
    
     background-color:#5E6073;
     opacity:90%;
@@ -232,14 +268,14 @@ aside{
     margin:20px;
     justify-content:center;
     padding:5px 5px 5px 5px;
-    flex-direction: row;
+    flex-direction:row;
     border-radius: 8px;
 }
-aside a{
+.sidebar a{
     margin:20px;
    
 }
-aside img{
+.sidebar img{
 
     width: 70%; /* decreased the image so that it looks better*/
     height:auto;
@@ -247,7 +283,14 @@ aside img{
 
 }
 
-
+.video{
+    display:flex;
+    flex-direction: row;
+}
+.video iframe{
+    padding:50px;
+    border-style:none;
+}
 
 
 /* FOOTER
@@ -259,12 +302,16 @@ footer {
     opacity:60%;
     display:flex;
     list-style: none;
-    position:static;
-    padding:10px 20px 10px 15px;
+    position:relative;
+    padding:10px 20px 10px 10px;
     text-align:center;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     border-radius: 8px;
-    margin-top: 50px;
+    margin: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    
 }
 
 footer a{
@@ -272,7 +319,7 @@ footer a{
    text-align: center;
     color:#F2F4D1; 
     padding: 10px 10px 2px 20px;
-    
+
 }    
 footer address{
    padding:10px 5px 5px 5px;
