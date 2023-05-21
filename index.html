@@ -7,14 +7,16 @@
 	<!--=====Used link that has relation to icon on the browser window when it is opened next to the title of the page====-->
     <link rel="icon" href="images/lill.png" type="image/png">
     <title> Daisy Leming Art </title>
+    <!--== I added another relation with css page, so that the browser knows to use these styles that are mentioned in the style sheet==-->
     <link rel="stylesheet" href="style.css">
 </head>
 
-	<body>
-        <!--=======WEB PAGE HEADING ======-->
+	<body> <!--==Main part of the webpage==-->
+     
         
-        <!--=====I made my heading a link to home page, so that it would be easier to move back to home page if needed====-->
+        
      <div id="wrapper">
+         <!--== I left out header on purpose because I really liked the way the logo sits in the navigation bar. Later if I like I can apply sticky to the navigation bar and the logo will also stick to the screen==-->
       <header>
          </header>  
             
@@ -24,8 +26,11 @@
         <nav>
             <!--====use "ul" to create a list and "a href" to mark that this is a link===-->
             <ul>
+                
+            <!--=====I made my heading a link to home page, so that it would be easier to move back to home page if needed====-->
             <!--== Use of class is about nicknaming some elements so that I could do different stylisation on certain element==-->
-               <li class= "logo"><a href="index.html" title= "Daisy Leming art"><img src="images/logovalge.svg" alt="DaisyLemingArt" width="1023" height="294"></a></li>
+               <li class= "logo"><a href="index.html" title= "Daisy Leming art">
+                   <img src="images/logovalge.svg" alt="DaisyLemingArt" width="1023" height="294"></a></li>
               
                 <li><a href="about.html" title="About me">About me</a></li>
                 <li><a href="gallery.html" title="Gallery">Gallery</a></li>
@@ -38,53 +43,53 @@
              
                 </ul>  
             </nav>
-        
-    <main>
+        <!--==class is a custom selector for specific stylasation==-->
+    <main class="home"> 
         <!--=====CONTENT AREA 1=========-->
-    <!--======Image  goes here====-->
+    <!--======Img tag is for images, src is for the source of the image, alt is for the name of the image and size is adjusted by measurements====-->
                <img src="images/profile-image.png" alt="my image" width="300" height="338">
         
-            <article>
+        <article>
                 
-    <!--====I named this section info so that I know which style I will apply to this part==-->
+    <!--====Article is being used to show there is a text post that leads to a bigger section.==-->
          
               <h2> Who am I</h2>
                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sollicitudin quam at felis ultricies, rutrum convallis nisl blandit. Vivamus porttitor dolor eget varius molestie. Etiam tempor erat ac lectus consequat tristique. Mauris cursus iaculis sapien at sollicitudin. Quisque eros est, porttitor sed leo sit amet, tristique tempus est. Maecenas tempus, lacus id pellentesque aliquet, arcu ante malesuada est, vitae hendrerit justo lectus a velit. Sed lacinia tincidunt ante, ut consectetur dui congue non. Suspendisse rhoncus nulla sed efficitur laoreet. Integer ut neque gravida, dapibus urna in, tempor augue. Integer vel congue lorem. Nam vestibulum venenatis bibendum. Fusce nec sagittis dolor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque justo mauris, pellentesque ac malesuada ut, faucibus ut massa. Etiam fermentum justo at blandit iaculis....</p>
                 
-        <!--==============Button for read more on my about page===-->
+        <!--==============Button for read more on my about page, I added an ID which is also a selector and named it link to add special stylisation to it. Target means that it will openit up on a new page.===-->
                 
                 <a id="link" href="about.html" title="More about me" rel="internal" target="-blank"> Read more</a>
                
             </article>
     </main>
         <!--====== SIDEBAR======-->
-        <!--==Small part of my gallery shown here, possibly make a slideshow==-->
-        <aside>
-            <a href="images/Digitalart1.png" Title="Sinking" target="_blank">
+        <!--==Small part of my gallery shown here, aside is sidebar tag and I added it  it's own class.==-->
+        <aside class="sidebar">
+                <a href="images/Digitalart1.png" Title="Sinking" target="_blank">
                     <img src="images/Digitalart1.png" alt="sinking" width="250" height="250"></a>
-            <a href="images/Drawing3.png" Title="portrait" target="_blank">
+                <a href="images/Drawing3.png" Title="portrait" target="_blank">
                     <img src="images/Drawing3.png" alt="portrait drawing" width="200" height="280"></a>
-            <a href="images/Painting3.png" Title="Abstract art" target="_blank">
+                <a href="images/Painting3.png" Title="Abstract art" target="_blank">
                     <img src="images/Painting3.png" alt="Abstract art" width="250" height="300"></a>
         
             
-        </aside>
+            </aside>
         </div>
         <!--=====FOOOTER======-->
         <footer>
         <!--======Using copyright mark, to show that everything on this page belongs to me and i own the copyright===-->
-                <p>&copy;Daisy Leming Art</p>
+                <p>&copy; Daisy Leming Art</p>
         <!--=====External links to social media=====-->
-                <a href= "https://www.instagram.com/daisylemingart/" Title="Instagram" rel="external" target="_blank">Instagram</a>
-                <a href= "https://www.facebook.com/daisylemingart/" Title="Facebook" rel="external" target="_blank">Facebook</a>
+                    <a href= "https://www.instagram.com/daisylemingart/" Title="Instagram" rel="external" target="_blank">Instagram</a>
+                    <a href= "https://www.facebook.com/daisylemingart/" Title="Facebook" rel="external" target="_blank">Facebook</a>
     
          <!--=== adding email here to make contacting me easier====-->
     
-        <address>
+                <address>
 			Contact me at: 
-                <a href="mailto:daisy.leming@gmail.com">daisy.lemingatgmail.com</a>
+                    <a href="mailto:daisy.leming@gmail.com">daisy.lemingatgmail.com</a>
 			
-		</address>
+		      </address>
         <!--======I added footer to all the pages===-->
         </footer>
         
