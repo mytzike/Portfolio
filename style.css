@@ -31,7 +31,7 @@ body {
     font-weight: 300;
     font-family: "mukta", sans-serif;
     color: #F2F4D1; /* light yellowish */
-    background-image:url(images/pexels-madison-inouye-2821756.png);
+    background-image:url(Images/pexels-madison-inouye-2821756.png);
     background-size:cover;
     margin: 0;
     
@@ -58,7 +58,6 @@ nav {
     background-color: #5E6073;
     opacity: 60%;
     width: 100%;
-    padding:5px 2px;/* padding is space around the content*/
     border-radius: 8px;/* added this feature, so that the corners are not that sharp*/
 }
 
@@ -221,6 +220,7 @@ main p{
 */
 .pictures{
     background-color:#5E6073;
+    border-radius: 8px;
     opacity:80%;
     display:flex;
     flex-wrap:wrap;
@@ -307,7 +307,7 @@ footer {
     text-align:center;
     justify-content:space-evenly;
     border-radius: 8px;
-    margin: 50px;
+    margin-top: 50px;
     flex-wrap: wrap;
     align-items: center;
     
