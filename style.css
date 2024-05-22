@@ -190,7 +190,7 @@ main p{
     
 }
 .home h2 {
-    background-image: url(Images/creativity.jpg);
+    background-image: url(images/creativity.jpg);
     background-size: cover;
     background-blend-mode: lighten;
 }
