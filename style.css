@@ -1,7 +1,7 @@
 /*
 Author: Daisy Leming
-Date:21.05.2023
-Version: 1
+Date:20.05.2024
+Version: 2
 */
 
 
@@ -10,7 +10,10 @@ Colours
 #5E6073 
 #89A3B2  
 #B2D3BE 
-#F2F4D1   
+#F2F4D1
+#F9EBC7 wrapper
+ #2C3B26 body colour
+#B99470 red
 /*
 
 @import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;500;700&display=swap');
@@ -30,15 +33,38 @@ body {
     font-size: 16px;
     font-weight: 300;
     font-family: "mukta", sans-serif;
-    color: #F2F4D1; /* light yellowish */
-    background-image:url(images/pexels-madison-inouye-2821756.png);
-    background-size:cover;
+    color:  #2C3B26;
+  
     margin: 0;
     
 }
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -4;
+  display: block;
+  background-image: url('Images/2.jpg');
+  filter: saturate(4);
+  opacity: 80%;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.smlbackground {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F9EBC7;
+    opacity: 0.9; /* Adjust opacity as needed */
+    z-index: -1; /* Ensure it's behind other content */
+}
 #wrapper { /* I use this to create a size for my website*/
     width:1200px;
-    margin:0 auto; /* Telling the content to stay in the center*/
+    margin:0 auto;
+    position: relative;
 }
 
 
@@ -55,10 +81,11 @@ body {
 ------------------------------------------------
 */
 nav {
-    background-color: #5E6073;
-    opacity: 60%;
+    background-color:  #5F6F52;
+    opacity: 100%;
     width: 100%;
-    border-radius: 8px;/* added this feature, so that the corners are not that sharp*/
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    
 }
 
 nav ul{/*means that I will stylise the links not the navigation bar itself*/
@@ -91,17 +118,23 @@ nav a { /* I use same order to create buttons*/
     margin-bottom: 20px;
     margin-top:20px;
     display:flex;
+
 }
 nav a:visited{/*means when the link has been clicked once*/
-    color:#B2D3BE;
+    color:#FEFAEO;
 }
 
 
 nav a:hover {/*When the cursor goes over to indicate that this is a button*/
-    background-color: #B2D3BE;
+    background-color: #B99470;
     color:#5E6073;
     
 }
+nav a:active {
+    background-color: #89A3B2;
+    color: #B99470;
+}
+
 .logo a {
   
     padding:inherit;/*means that it inherits the padding from the parent*/
@@ -119,8 +152,8 @@ main{
     display:flex;
 }
 main article{
-    background-color:#5E6073;
-    opacity: 50%;
+    
+    opacity: 100;
     border-radius: 8px;
     margin: 20px;
     display:flex;
@@ -129,31 +162,42 @@ main article{
 }
 
 main img{
-    padding: 50px;
-    display:flex;/*flex is never inherited and has to be used always to state the browser that this is a flex item otherwise it will be block item by default*/
+    
+    display:flex;
+    padding:20px;
+    
+    /*flex is never inherited and has to be used always to state the browser that this is a flex item otherwise it will be block item by default*/
 
 }
 main h2{
     
-    padding:25px;
+    padding:30px;
     text-align: center;
     font-size: 50px;
     font-family:sans-serif; 
     margin: 50px;
     display:flex;
     flex-direction: row;
-    align-self: center
+    align-self: center;
+    border-style: solid;
+    
+
     
 }
 main p{
-    padding:25px;
-    text-align: center;
+    padding:0px;
+    text-align:left;
     
+}
+.home h2 {
+    background-image: url(Images/creativity.jpg);
+    background-size: cover;
+    background-blend-mode: lighten;
 }
 #link{
     display:flex;
     text-decoration: none;
-    color:#F2F4D1;
+    color: #2C3B26;
     border: solid;
     padding:5px 5px 5px 5px;
     flex-direction: column;
@@ -166,7 +210,6 @@ main p{
 .form-center{
     display: block;/*used block item in purpose for design I was going for*/
     padding:100px 500px;
-    background-color:#5E6073;
     opacity:70%;
     margin-top:20px;
     border-radius:8px;
@@ -199,7 +242,7 @@ main p{
 
 }
 .contact-heading h2{
-    background-color:#5E6073;
+   
     opacity:60%;
     margin-top:25px;
     padding:25px 25px;
@@ -215,47 +258,62 @@ main p{
     flex-direction: row;
 }
  
-/* CONTENT 2
-------------------------------------------------
-*/
-.pictures{
-    background-color:#5E6073;
+
+/* CONTENT 2 */
+.pictures {
+    
     border-radius: 8px;
-    opacity:80%;
-    display:flex;
-    flex-wrap:wrap;
-    
+    padding: 20px 20px 20px 20px; /* Adjust padding as needed */
 }
-.pictures h2{
-    display:flex;
-    flex-wrap:wrap;
-    flex-direction:column;
-    font-size: 25px;
-    padding:25px 25px 25px 25px;
-    
-    
+
+.pictures h2 {
+    font-size: 50px;
+    border-style:solid;
+    text-align: center;/* Adjust padding as needed */
+    padding:30px;
+    margin: 50px 450px;
 }
-.pictures div {
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content: space-evenly;
-    padding:100px;
-    
+
+.pictures .image-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly; /* Adjust as needed */
+}
+
+.pictures img {
+    max-width: 100%; /* Ensure images maintain aspect ratio */
+    height: auto; /* Allow images to scale vertically */
+    margin-bottom: 5px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.5);/* Adjust margin as needed */
+    padding:0;
+}
+.games h2{
+    font-size: 50px;
+    border-style: solid;
+    text-align: center;
+    margin: 50px 450px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.games h1{
+    margin-left: 50px;
+}
+.games p{
+    margin-left: 50px;
+}
+.games iframe{
+    margin-left: 100px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+.pictures img {
+        width: calc(50% - 20px); /* Adjust width and margin as needed */
     }
-.pictures img{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
-    padding:25px 50px;
-    
+
 }
-.pictures a{
-    display:flex;
-    justify-content: space-evenly;
-    
-    
-}
+
+
 /* SIDEBAR
 ------------------------------------------------
 */
@@ -298,15 +356,14 @@ main p{
 */
 
 footer {
-    background-color:#5E6073;
-    opacity:60%;
+    background-color:#5F6F52;
+    opacity:100%;
     display:flex;
     list-style: none;
     position:relative;
     padding:10px 20px 10px 10px;
     text-align:center;
     justify-content:space-evenly;
-    border-radius: 8px;
     margin-top: 50px;
     flex-wrap: wrap;
     align-items: center;
@@ -325,4 +382,6 @@ footer address{
    padding:10px 5px 5px 5px;
 }  
     
-    
+#wrapper .content {
+    opacity:100;
+}   
