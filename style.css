@@ -44,7 +44,7 @@ body {
   right: 0;
   z-index: -4;
   display: block;
-  background-image: url('Images/2.jpg');
+  background-image: url('images/2.jpg');
   filter: saturate(4);
   opacity: 80%;
   background-size: cover;
@@ -121,7 +121,7 @@ nav a { /* I use same order to create buttons*/
 
 }
 nav a:visited{/*means when the link has been clicked once*/
-    color:#FEFAEO;
+    color:#FEFAE0;
 }
 
 
