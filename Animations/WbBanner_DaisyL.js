@@ -8147,9 +8147,9 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"images/Image_1.png", id:"Image_1"},
-		{src:"images/Image_2.png", id:"Image_2"},
-		{src:"images/WbBanner_DaisyL_atlas_1.png", id:"WbBanner_DaisyL_atlas_1"}
+		{src:"Animations/images/Image_1.png", id:"Image_1"},
+		{src:"Animations/images/Image_2.png", id:"Image_2"},
+		{src:"Animations/images/WbBanner_DaisyL_atlas_1.png", id:"WbBanner_DaisyL_atlas_1"}
 	],
 	preloads: []
 };
