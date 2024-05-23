@@ -180,33 +180,19 @@ main h2{
     flex-direction: row;
     align-self: center;
     border-style: solid;
-    
-
-    
+   
 }
 main p{
     padding:0px;
     text-align:left;
-  
-    
-.designheading {
-    font-size: 50px;
-    border-style:solid;
-    text-align: center;/* Adjust padding as needed */
-    padding:30px;
-    margin: 50px 450px;
-
-
 }
 
-
-
-}
 .home h2 {
     background-image: url(images/creativity.jpg);
     background-size: cover;
     background-blend-mode: lighten;
 }
+
 #link{
     display:flex;
     text-decoration: none;
@@ -285,6 +271,7 @@ main p{
     text-align: center;/* Adjust padding as needed */
     padding:30px;
     margin: 50px 450px;
+    background-image:none;
 }
 
 .pictures .image-container {
