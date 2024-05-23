@@ -345,8 +345,11 @@ main p{
     display:flex;
     flex-direction: row;
 }
+.video h1{
+    padding-right:50px;
+}
 .video iframe{
-    padding:50px;
+    padding:5px;
     border-style:none;
 }
 
