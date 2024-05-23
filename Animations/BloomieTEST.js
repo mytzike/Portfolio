@@ -9062,7 +9062,7 @@ if (reversed == null) { reversed = false; }
 		playSound("mynameis");
 	}
 	this.frame_97 = function() {
-		playSound("_2comeal");
+		playSound("2comeal");
 	}
 	this.frame_207 = function() {
 		/* Stop at This Frame
@@ -13211,7 +13211,7 @@ lib.properties = {
 		{src:"images/BloomieTEST_atlas_39.png", id:"BloomieTEST_atlas_39"},
 		{src:"images/BloomieTEST_atlas_40.png", id:"BloomieTEST_atlas_40"},
 		{src:"images/BloomieTEST_atlas_41.png", id:"BloomieTEST_atlas_41"},
-		{src:"sounds/_2comeal.mp3", id:"_2comeal"},
+		{src:"sounds/2comeal.mp3", id:"2comeal"},
 		{src:"sounds/areflowers.mp3", id:"areflowers"},
 		{src:"sounds/beefriend.mp3", id:"beefriend"},
 		{src:"sounds/bumblebee45600.mp3", id:"bumblebee45600"},
